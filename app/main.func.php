@@ -9,11 +9,9 @@ function main()
 		exit;
 	}
 
+	if(url(1)=='index') d()->main = 1;
 	d()->content = d()->content();
 	print d()->render('main_tpl');
 }
 
-function hello_world()
-{
-	print "Hello, World!";
-}
+

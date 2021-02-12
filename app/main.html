@@ -3,13 +3,33 @@
 <head>
 <title></title>
 <meta charset="UTF-8">
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/vendors/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+	<link rel="stylesheet" href="/vendors/bootstrap/css/bootstrap.css">
 	<link rel="stylesheet" href="/images/style.css">
 </head>
 <body> 
 {{admin_panel}}
-<div class="content">
-	{{{content}}}
+<header>
+    <div class="container">
+        @if(d()->main == 1):
+        {{main_header_tpl}}
+        @else:
+        {{all_header_tpl}}
+        @endif;
+    </div>
+</header>
+<div class="container">
+    {{menu_tpl}}
 </div>
+<section>
+    <div class="content">
+        {{{content}}}
+    </div>
+</section>
+<footer>
+
+</footer>
 </body>
 </html>
