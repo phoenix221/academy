@@ -3,7 +3,7 @@
 route_all();
 
 route('/error_404', 'error_404');
-route('/', 'pages#');
+route('/', 'pages#main_pages');
 
 
 //route('/news/index', 'content', 'news#index');

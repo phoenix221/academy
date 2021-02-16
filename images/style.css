@@ -37,3 +37,62 @@ a img, a
 	text-decoration: none !important;
 	font-size: 24px;
 }
+.main_blocks{
+	background-image: url("/images/images/head-main.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin-top: 25px;
+	height: 500px;
+}
+.planets{
+	position: absolute;
+}
+.pl1{
+	background-image: url("/images/images/pl1.png");
+	width: 73px;
+	height: 75px;
+	margin-left: -74px;
+}
+.pl2{
+	background-image: url("/images/images/pl2.png");
+	width: 88px;
+	height: 89px;
+	margin-left: -23px;
+	margin-top: 118px;
+}
+.pl3{
+	background: url("/images/images/pl3.png");
+	width: 171px;
+	height: 84px;
+	margin-left: -118px;
+	margin-top: 234px;
+}
+.pl4{
+	background: url("/images/images/pl4.png");
+	width: 97px;
+	height: 95px;
+	margin-left: 300px;
+	margin-top: 0px;
+}
+.pl5{
+	background: url("/images/images/pl5.png");
+	width: 164px;
+	height: 83px;
+	margin-left: 386px;
+	margin-top: 91px;
+}
+.pl6{
+	background: url("/images/images/pl6.png");
+	width: 87px;
+	height: 87px;
+	margin-left: 310px;
+	margin-top: 186px;
+}
+.pl7{
+	background: url("/images/images/pl7.png");
+	width: 81px;
+	height: 83px;
+	margin-left: 400px;
+	margin-top: 270px;
+}
