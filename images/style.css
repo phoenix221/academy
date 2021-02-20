@@ -74,59 +74,98 @@ a img, a
 	width: 73px;
 	height: 75px;
 	position: absolute;
-	margin-left: -74px;
+	margin-left: -53px;
+	margin-top: 16px;
 }
 .pl2{
 	background-image: url("/images/images/pl2.png");
 	width: 88px;
 	height: 89px;
 	position: absolute;
-	margin-left: -23px;
-	margin-top: 118px;
+	margin-left: -5px;
+	margin-top: 135px;
 }
 .pl3{
 	background: url("/images/images/pl3.png");
 	width: 171px;
 	height: 84px;
 	position: absolute;
-	margin-left: -118px;
-	margin-top: 234px;
+	margin-left: -102px;
+	margin-top: 251px;
 }
 .pl4{
 	background: url("/images/images/pl4.png");
 	width: 97px;
 	height: 95px;
 	position: absolute;
-	margin-left: 300px;
-	margin-top: 0px;
+	margin-left: 328px;
+	margin-top: 14px;
 }
 .pl5{
 	background: url("/images/images/pl5.png");
 	width: 164px;
 	height: 83px;
 	position: absolute;
-	margin-left: 386px;
-	margin-top: 91px;
+	margin-left: 410px;
+	margin-top: 102px;
 }
 .pl6{
 	background: url("/images/images/pl6.png");
 	width: 87px;
 	height: 87px;
 	position: absolute;
-	margin-left: 310px;
-	margin-top: 186px;
+	margin-left: 340px;
+	margin-top: 195px;
 }
 .pl7{
 	background: url("/images/images/pl7.png");
 	width: 81px;
 	height: 83px;
 	position: absolute;
-	margin-left: 400px;
-	margin-top: 270px;
+	margin-left: 417px;
+	margin-top: 286px;
 }
 .blocks{
 	width: 50%;
 	position: absolute;
+}
+.blocks h2{
+	font-size: 38px;
+	text-transform: uppercase;
+	font-weight: 200;
+}
+.blocks h1 strong{
+	color: #0ba29d;
+	font-size: 60px;
+	font-weight: 900;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	line-height: 70px;
+}
+.blocks h4 strong{
+	font-size: 36px;
+	line-height: 30px;
+	font-weight: 600;
+}
+.blocks h3{
+	font-size: 42px;
+	text-transform: uppercase;
+	color: #0ba29d;
+	font-weight: bold;
+	line-height: 35px;
+}
+.blocks h5{
+	font-size: 19px;
+}
+.btn-blocks{
+	color: #5e5e5e;
+	background: #ffdc74;
+	padding: 8px 20px;
+	font-size: 18px;
+	border-radius: 5px;
+	text-decoration: none;
+	border: 1px solid #ffdc74;
+	margin-top: 50px;
 }
 hr{
 	border-top: 10px dotted #e1e1e1;
