@@ -170,3 +170,27 @@ a img, a
 hr{
 	border-top: 10px dotted #e1e1e1;
 }
+
+@media (max-width: 991px) {
+	.logo img{
+		width: 250px;
+	}
+	.tel{
+		display: none;
+	}
+	.menu{
+		position: absolute;
+		right: 20px;
+		top: 25px;
+	}
+	.navbar-toggler-icon{
+		width: 80px;
+		height: 70px;
+	}
+	.show{
+		float: right;
+	}
+	.planets{
+		display: none;
+	}
+}
