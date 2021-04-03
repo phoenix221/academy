@@ -170,6 +170,11 @@ a img, a
 hr{
 	border-top: 10px dotted #e1e1e1;
 }
+.tabs-content{
+	background: url("/images/images/circle4.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
 
 @media (max-width: 991px) {
 	.logo img{
@@ -187,10 +192,73 @@ hr{
 		width: 80px;
 		height: 70px;
 	}
-	.show{
-		float: right;
-	}
 	.planets{
 		display: none;
+	}
+	.nav-item{
+		padding: 5px 7px;
+	}
+	.nav-link {
+		font-size: 35px;
+	}
+	.dropdown-item{
+		font-size: 32px;
+		margin: 8px 0;
+	}
+	.blocks{
+		width: 100%;
+		display: block;
+		position: static;
+	}
+	.blocks h2{
+		font-size: 60px;
+	}
+	.blocks h1 strong{
+		font-size: 85px;
+		line-height: 85px;
+	}
+	.blocks h4 strong{
+		font-size: 40px;
+		line-height: 45px;
+	}
+	.blocks h3{
+		font-size: 50px;
+		line-height: 50px;
+	}
+	.blocks h5{
+		font-size: 30px;
+	}
+	.main_blocks{
+		background: linear-gradient(to top left, rgb(200,255,255), rgb(220, 252, 247));
+		height: 690px;
+		padding-top: 25px;
+	}
+	.btn-blocks{
+		padding: 10px 40px;
+		font-size: 40px;
+	}
+	.navbar-collapse {
+		position: fixed;
+		top: 50px;
+		left: 0;
+		padding-left: 15px;
+		padding-right: 15px;
+		padding-bottom: 15px;
+		width: 75%;
+		height: 100%;
+	}
+
+	.navbar-collapse.collapsing {
+		left: -75%;
+		transition: height 0s ease;
+	}
+
+	.navbar-collapse.show {
+		left: 0;
+		transition: left 300ms ease-in-out;
+	}
+
+	.navbar-toggler.collapsed ~ .navbar-collapse {
+		transition: left 500ms ease-in-out;
 	}
 }
