@@ -171,9 +171,64 @@ hr{
 	border-top: 10px dotted #e1e1e1;
 }
 .tabs-content{
+	margin-top: 25px;
+}
+.tabs-text{
 	background: url("/images/images/circle4.png");
 	background-repeat: no-repeat;
-	background-size: 100% 100%;
+	text-align: center;
+	background-position: center;
+	width: 430px;
+	height: 430px;
+}
+.tabs-text p{
+	margin-top: 35px;
+	padding: 100px;
+	font-size: 16px;
+}
+.school{
+	margin-top: 50px;
+}
+.school h2{
+	color: #093130;
+	margin: 10px 0 0;
+	font-size: 30px;
+	font-family: 'Exo 2',Arial,'Arial Unicode MS',Helvetica,Sans-Serif;
+	font-weight: 900;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	text-align: center;
+}
+.cifr{
+	font-weight: 900;
+	font-size: 70px;
+	color: #ededed;
+	text-decoration: none !important;
+	line-height: 80px;
+}
+.tabs-item{
+	text-align: center;
+	position: relative;
+}
+.tabs-item a{
+	text-decoration: none;
+}
+.tabs-item a p{
+	font-family: 'Exo 2',Arial,'Arial Unicode MS',Helvetica,Sans-Serif;
+	color: #303f50;
+	font-size: 16px;
+}
+.tabs-margin{
+	margin: 65px 0;
+}
+.tabs-dot{
+	position: absolute;
+	background: url("/images/images/dot2.png");
+	background-repeat: no-repeat;
+	width: 42px;
+	height: 42px;
+	margin-left: -21px;
+	z-index: 10;
 }
 
 @media (max-width: 991px) {

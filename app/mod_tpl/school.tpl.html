@@ -1,13 +1,76 @@
 <div class="container">
     <div class="school">
-        <h2>ШКОЛА АСТРОЛОГИИ АКАДЕМИЯ ДЖЙОТИШ ЭТО</h2>
-        <ul class="tabs-content">
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
+        <h2>ШКОЛА АСТРОЛОГИИ<br/> АКАДЕМИЯ ДЖЙОТИШ ЭТО</h2>
+        <div class="tabs-content">
+            <div class="row">
+                <div class="col tabs-item" id="exp1">
+                    <button class="btn btn-link" v-on:click="2">
+                        <span class="cifr">02</span>
+                        <p>Несколько вариантов онлайн обучения</p>
+                        <i class="tabs-dot"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="tabs-item tabs-margin" id="exp2">
+                        <button class="btn btn-link" v-on:click="1">
+                            <span class="cifr">01</span>
+                            <p>Парампара К.Н.Рао/Марк Бони</p>
+                        </button>
+                    </div>
+                    <div class="tabs-item tabs-margin">
+                        <a href="#">
+                            <span class="cifr">06</span>
+                            <p>Полное образованние</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-6 tabs-text">
+                    <p v-if="1">Мы находимся в парампаре (линии) школы Котамраджу Нараяна Рао.
+
+                        Преподаем под руководством одного из ведущих преподавателей Института Астрологии Бхаратья Видья Бхаван (Индия, Дели)Марка Бони, основателя Тихоокеанского Института Ведической Науки.</p>
+
+                    <p v-if="2">15 вариантов обучения!
+
+                        3 уровня подготовки!
+
+                        Возможность старта в группе или индивидуально, по плану или в удобный для вас день. Вы точно найдете для себя то, что нужно именно Вам!</p>
+                </div>
+                <div class="col">
+                    <div class="tabs-item tabs-margin">
+                        <a href="#">
+                            <span class="cifr">03</span>
+                            <p>Ежедневная поддержка студентов</p>
+                        </a>
+                    </div>
+                    <div class="tabs-item tabs-margin">
+                        <a href="#">
+                            <span class="cifr">04</span>
+                            <p>Дополнительное образование</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col tabs-item">
+                    <a href="#">
+                        <span class="cifr">05</span>
+                        <p>Возможность практики</p>
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
+
+<script>
+    var exp = new Vue({
+        el: '#exp1',
+        data: 1,
+    })
+    var exp2 = new Vue({
+        el: '#exp2',
+        data: 2,
+    })
+</script>
