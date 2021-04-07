@@ -210,10 +210,10 @@ hr{
 	text-align: center;
 	position: relative;
 }
-.tabs-item a{
+.tabs-item button{
 	text-decoration: none;
 }
-.tabs-item a p{
+.tabs-item button p{
 	font-family: 'Exo 2',Arial,'Arial Unicode MS',Helvetica,Sans-Serif;
 	color: #303f50;
 	font-size: 16px;

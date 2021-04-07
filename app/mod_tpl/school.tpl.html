@@ -1,10 +1,10 @@
 <div class="container">
     <div class="school">
         <h2>ШКОЛА АСТРОЛОГИИ<br/> АКАДЕМИЯ ДЖЙОТИШ ЭТО</h2>
-        <div class="tabs-content">
+        <div class="tabs-content" id="tabs">
             <div class="row">
-                <div class="col tabs-item" id="exp1">
-                    <button class="btn btn-link" v-on:click="2">
+                <div class="col tabs-item">
+                    <button class="btn btn-link" v-on:click="show('two')">
                         <span class="cifr">02</span>
                         <p>Несколько вариантов онлайн обучения</p>
                         <i class="tabs-dot"></i>
@@ -13,8 +13,8 @@
             </div>
             <div class="row">
                 <div class="col">
-                    <div class="tabs-item tabs-margin" id="exp2">
-                        <button class="btn btn-link" v-on:click="1">
+                    <div class="tabs-item tabs-margin">
+                        <button class="btn btn-link" v-on:click="show('first')">
                             <span class="cifr">01</span>
                             <p>Парампара К.Н.Рао/Марк Бони</p>
                         </button>
@@ -26,12 +26,12 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-6 tabs-text">
-                    <p v-if="1">Мы находимся в парампаре (линии) школы Котамраджу Нараяна Рао.
+                <div class="col-6 tabs-text" id="tabs-text">
+                    <p v-if="show1">Мы находимся в парампаре (линии) школы Котамраджу Нараяна Рао.
 
                         Преподаем под руководством одного из ведущих преподавателей Института Астрологии Бхаратья Видья Бхаван (Индия, Дели)Марка Бони, основателя Тихоокеанского Института Ведической Науки.</p>
 
-                    <p v-if="2">15 вариантов обучения!
+                    <p v-if="show2">15 вариантов обучения!
 
                         3 уровня подготовки!
 
@@ -65,12 +65,24 @@
 </div>
 
 <script>
-    var exp = new Vue({
-        el: '#exp1',
-        data: 1,
-    })
-    var exp2 = new Vue({
-        el: '#exp2',
-        data: 2,
+    var tabs = new Vue({
+        el: '#tabs',
+        data: {
+          show1: true,
+          show2: false
+        },
+        methods: {
+            show(message) {
+                console.log(message);
+                if(message == "first"){
+                    this.show1 = true;
+                    this.show2 = false;
+                }
+                if(message == "two"){
+                    this.show1 = false;
+                    this.show2 = true;
+                }
+            }
+        }
     })
 </script>
