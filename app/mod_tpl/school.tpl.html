@@ -1,66 +1,70 @@
 <div class="container">
     <div class="school">
         <h2>ШКОЛА АСТРОЛОГИИ<br/> АКАДЕМИЯ ДЖЙОТИШ ЭТО</h2>
-        <div class="tabs-content" id="tabs">
-            <div class="row">
-                <div class="col tabs-item">
-                    <button class="btn btn-link" v-on:click="show('two')">
-                        <span class="cifr">02</span>
-                        <p>Несколько вариантов онлайн обучения</p>
-                        <i class="tabs-dot"></i>
-                    </button>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <div class="tabs-item tabs-margin">
-                        <button class="btn btn-link" v-on:click="show('first')">
-                            <span class="cifr">01</span>
-                            <p>Парампара К.Н.Рао/Марк Бони</p>
+        <foreach school>
+            <div class="tabs-content" id="tabs">
+                <div class="row">
+                    <div class="col tabs-item">
+                        <button class="btn btn-link tabs-btn" v-on:click="show('two')" v-bind:class="{active: isActive2}">
+                            <span class="cifr" v-bind:class="{active: isActive2}">02</span>
+                            <p v-bind:class="{'active-text': isActive2}">{.second_item}</p>
+                            <i class="tabs-dot" v-bind:class="{'active-dot': isActive2}"></i>
                         </button>
                     </div>
-                    <div class="tabs-item tabs-margin">
-                        <a href="#">
-                            <span class="cifr">06</span>
-                            <p>Полное образованние</p>
-                        </a>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="tabs-item tabs-margin">
+                            <button class="btn btn-link tabs-btn" v-on:click="show('first')" v-bind:class="{active: isActive1}">
+                                <span class="cifr" v-bind:class="{active: isActive1}">01</span>
+                                <p v-bind:class="{'active-text': isActive1}">{.first_item}</p>
+                                <i class="tabs-dot" v-bind:class="{'active-dot': isActive1}"></i>
+                            </button>
+                        </div>
+                        <div class="tabs-item tabs-margin">
+                            <button class="btn btn-link tabs-btn" v-on:click="show('sixth')" v-bind:class="{active: isActive6}">
+                                <span class="cifr" v-bind:class="{active: isActive6}">06</span>
+                                <p v-bind:class="{'active-text': isActive6}">{.sixth_item}</p>
+                                <i class="tabs-dot" v-bind:class="{'active-dot': isActive6}"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-6 tabs-text" id="tabs-text">
+                        <p v-if="show1">{.first_text}</p>
+                        <p v-if="show2">{.second_text}</p>
+                        <p v-if="show3">{.third_text}</p>
+                        <p v-if="show4">{.fourth_text}</p>
+                        <p v-if="show5">{.fifth_text}</p>
+                        <p v-if="show6">{.sixth_text}</p>
+                    </div>
+                    <div class="col">
+                        <div class="tabs-item tabs-margin">
+                            <button class="btn btn-link tabs-btn" v-on:click="show('third')" v-bind:class="{active: isActive3}">
+                                <span class="cifr" v-bind:class="{active: isActive3}">03</span>
+                                <p v-bind:class="{'active-text': isActive3}">{.third_item}</p>
+                                <i class="tabs-dot" v-bind:class="{'active-dot': isActive3}"></i>
+                            </button>
+                        </div>
+                        <div class="tabs-item tabs-margin">
+                            <button class="btn btn-link tabs-btn" v-on:click="show('fourth')" v-bind:class="{active: isActive4}">
+                                <span class="cifr" v-bind:class="{active: isActive4}">04</span>
+                                <p v-bind:class="{'active-text': isActive4}">{.fourth_item}</p>
+                                <i class="tabs-dot" v-bind:class="{'active-dot': isActive4}"></i>
+                            </button>
+                        </div>
                     </div>
                 </div>
-                <div class="col-6 tabs-text" id="tabs-text">
-                    <p v-if="show1">Мы находимся в парампаре (линии) школы Котамраджу Нараяна Рао.
-
-                        Преподаем под руководством одного из ведущих преподавателей Института Астрологии Бхаратья Видья Бхаван (Индия, Дели)Марка Бони, основателя Тихоокеанского Института Ведической Науки.</p>
-
-                    <p v-if="show2">15 вариантов обучения!
-
-                        3 уровня подготовки!
-
-                        Возможность старта в группе или индивидуально, по плану или в удобный для вас день. Вы точно найдете для себя то, что нужно именно Вам!</p>
-                </div>
-                <div class="col">
-                    <div class="tabs-item tabs-margin">
-                        <a href="#">
-                            <span class="cifr">03</span>
-                            <p>Ежедневная поддержка студентов</p>
-                        </a>
-                    </div>
-                    <div class="tabs-item tabs-margin">
-                        <a href="#">
-                            <span class="cifr">04</span>
-                            <p>Дополнительное образование</p>
-                        </a>
+                <div class="row">
+                    <div class="col tabs-item">
+                        <button class="btn btn-link tabs-btn" v-on:click="show('fifth')" v-bind:class="{active: isActive5}">
+                            <span class="cifr" v-bind:class="{active: isActive5}">05</span>
+                            <p v-bind:class="{'active-text': isActive5}">{.fifth_item}</p>
+                            <i class="tabs-dot" v-bind:class="{'active-dot': isActive5}"></i>
+                        </button>
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col tabs-item">
-                    <a href="#">
-                        <span class="cifr">05</span>
-                        <p>Возможность практики</p>
-                    </a>
-                </div>
-            </div>
-        </div>
+        </foreach>
     </div>
 </div>
 
@@ -69,7 +73,17 @@
         el: '#tabs',
         data: {
           show1: true,
-          show2: false
+          show2: false,
+          show3: false,
+          show4: false,
+          show5: false,
+          show6: false,
+          isActive1: true,
+          isActive2: false,
+          isActive3: false,
+          isActive4: false,
+          isActive5: false,
+          isActive6: false,
         },
         methods: {
             show(message) {
@@ -77,10 +91,87 @@
                 if(message == "first"){
                     this.show1 = true;
                     this.show2 = false;
+                    this.show3 = false;
+                    this.show4 = false;
+                    this.show5 = false;
+                    this.show6 = false;
+                    this.isActive1 = true;
+                    this.isActive2= false;
+                    this.isActive3= false;
+                    this.isActive4= false;
+                    this.isActive5= false;
+                    this.isActive6= false;
+
                 }
                 if(message == "two"){
                     this.show1 = false;
                     this.show2 = true;
+                    this.show3 = false;
+                    this.show4 = false;
+                    this.show5 = false;
+                    this.show6 = false;
+                    this.isActive1 = false;
+                    this.isActive2= true;
+                    this.isActive3= false;
+                    this.isActive4= false;
+                    this.isActive5= false;
+                    this.isActive6= false;
+                }
+                if(message == "third"){
+                    this.show1 = false;
+                    this.show2 = false;
+                    this.show3 = true;
+                    this.show4 = false;
+                    this.show5 = false;
+                    this.show6 = false;
+                    this.isActive1 = false;
+                    this.isActive2= false;
+                    this.isActive3= true;
+                    this.isActive4= false;
+                    this.isActive5= false;
+                    this.isActive6= false;
+                }
+                if(message == "fourth"){
+                    this.show1 = false;
+                    this.show2 = false;
+                    this.show3 = false;
+                    this.show4 = true;
+                    this.show5 = false;
+                    this.show6 = false;
+                    this.isActive1 = false;
+                    this.isActive2= false;
+                    this.isActive3= false;
+                    this.isActive4= true;
+                    this.isActive5= false;
+                    this.isActive6= false;
+                }
+                if(message == "fifth"){
+                    this.show1 = false;
+                    this.show2 = false;
+                    this.show3 = false;
+                    this.show4 = false;
+                    this.show5 = true;
+                    this.show6 = false;
+                    this.isActive1 = false;
+                    this.isActive2= false;
+                    this.isActive3= false;
+                    this.isActive4= false;
+                    this.isActive5= true;
+                    this.isActive6= false;
+                }
+                if(message == "sixth"){
+                    this.show1 = false;
+                    this.show2 = false;
+                    this.show3 = false;
+                    this.show4 = false;
+                    this.show5 = false;
+                    this.show6 = true;
+                    this.isActive1 = false;
+                    this.isActive2= false;
+                    this.isActive3= false;
+                    this.isActive4= false;
+                    this.isActive5= false;
+                    this.isActive6= true;
                 }
             }
         }

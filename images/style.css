@@ -210,13 +210,26 @@ hr{
 	text-align: center;
 	position: relative;
 }
-.tabs-item button{
-	text-decoration: none;
-}
 .tabs-item button p{
 	font-family: 'Exo 2',Arial,'Arial Unicode MS',Helvetica,Sans-Serif;
 	color: #303f50;
 	font-size: 16px;
+}
+.tabs-item button:hover{
+	text-decoration: none;
+}
+.tabs-item button p:hover{
+	color: #0ba29d;
+}
+.active{
+	color: #0ba29d69;
+}
+.active-text{
+	color: #0ba29d !important;
+}
+.tabs-btn:focus{
+	box-shadow: none;
+	text-decoration: none;
 }
 .tabs-margin{
 	margin: 65px 0;
@@ -229,6 +242,10 @@ hr{
 	height: 42px;
 	margin-left: -21px;
 	z-index: 10;
+	margin-top: 6px;
+}
+.active-dot{
+	background: url("/images/images/dot2g.png") !important;
 }
 
 @media (max-width: 991px) {

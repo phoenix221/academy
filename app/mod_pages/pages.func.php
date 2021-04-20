@@ -18,6 +18,7 @@ class PagesController
 	function main_pages()
     {
         d()->main_blocks = d()->Main_block;
+        d()->school = d()->School;
     }
 }
 
