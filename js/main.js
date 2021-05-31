@@ -22,9 +22,30 @@ new Vue({
         }
     }
 });
+// карусель
 var swiper = new Swiper(".tabs-carusel", {
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
     },
+});
+// карусель
+// всплывающее окно
+
+// register modal component
+Vue.component("modal", {
+    template: "#modal-template"
+});
+
+// start app
+new Vue({
+    el: "#teacher",
+    data: {
+        showModal1: false,
+        showModal2: false,
+        showModal3: false,
+        showModal4: false,
+        showModal5: false,
+        showModal6: false
+    }
 });

@@ -315,6 +315,147 @@ hr{
 	left: 324px;
 	bottom: 55px;
 }
+.teacher {
+	margin-top: 50px;
+}
+.teacher h3{
+	color: #093130;
+	font-size: 30px;
+	font-weight: 900;
+	text-transform: uppercase;
+	text-align: center;
+}
+.teacher-items{
+	text-align: center;
+	padding: 20px 30px;
+}
+.teacher-items button{
+	font-size: 22px;
+	font-weight: 700;
+	color: #0ba29d;
+}
+.teacher-items button:hover {
+	color: #0ba29d;
+}
+.teacher-items button:focus {
+	box-shadow: none;
+}
+.teacher-pos{
+	text-align: center !important;
+	font-weight: 700;
+	font-size: 18px;
+	text-transform: uppercase;
+	margin-top: 25px;
+}
+.teacher-items img{
+	width: 196px;
+	height: 198px;
+}
+.teacher-items p{
+	text-align: justify;
+}
+.teacher-items ul{
+	padding: 0;
+}
+.teacher-items ul li{
+	text-align: justify;
+	list-style-type: none;
+}
+.teacher-items ul li:before{
+	content: '';
+	margin-right: 10px;
+	bottom: 1px;
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 0;
+	line-height: 0;
+	background: #34b5b1;
+	border-radius: 50%;
+	width: 10px;
+	height: 10px;
+}
+.img-star{
+	padding-left: 120px;
+}
+.modal-mask {
+	position: fixed;
+	z-index: 9998;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: table;
+	transition: opacity 0.3s ease;
+}
+.modal-wrapper {
+	display: table-cell;
+	vertical-align: middle;
+}
+.modal-container {
+	width: 900px;
+	margin: 0px auto;
+	padding: 20px 30px;
+	background-color: #fff;
+	border-radius: 2px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
+	transition: all 0.3s ease;
+	font-family: Helvetica, Arial, sans-serif;
+}
+.modal-header {
+	border-bottom: 3px dotted #e1e1e1;
+}
+.modal-header h4 {
+	margin-top: 0;
+	font-size: 22px;
+	font-weight: 700;
+	color: #0ba29d;
+}
+.modal-body {
+	margin: 20px 0;
+	height: 400px;
+	overflow-y: scroll;
+}
+.modal-body ul li {
+    text-align: justify;
+    list-style-type: none;
+}
+.modal-body ul li:before {
+    content: '';
+    margin-right: 10px;
+    bottom: 1px;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 0;
+    line-height: 0;
+    background: #34b5b1;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+}
+.modal-footer {
+	border-top: 3px dotted #e1e1e1;
+}
+.modal-default-button {
+	float: right;
+    color: #000;
+}
+.modal-default-button:focus{
+    box-shadow: none;
+}
+.modal-enter {
+	opacity: 0;
+}
+.modal-leave-active {
+	opacity: 0;
+}
+.modal-enter .modal-container,
+.modal-leave-active .modal-container {
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+}
 
 @media (max-width: 1199px){
 	.navbar{
@@ -510,6 +651,12 @@ hr{
 		top: 80px;
 		left: 75px;
 	}
+	.teacher {
+		margin-top: 15px;
+	}
+    .modal-container {
+        width: 745px;
+    }
 }
 @media (max-width: 771px) {
 	.swiper-container{
@@ -519,6 +666,9 @@ hr{
 	.school h2{
 		letter-spacing: 0;
 	}
+    .modal-container {
+        width: 610px;
+    }
 }
 @media (max-width: 600px) {
 	.main_blocks{
@@ -529,6 +679,12 @@ hr{
 		width: 490px;
 		height: auto;
 	}
+    .modal-body ul {
+        padding-left: 15px;
+    }
+    .modal-container {
+        width: 520px;
+    }
 }
 @media (max-width: 500px) {
 	.school h2{
@@ -563,6 +719,9 @@ hr{
 	.menu{
 		margin-right: 0;
 	}
+    .modal-container {
+        width: 400px;
+    }
 }
 @media (max-width: 400px) {
 	.blocks h2 {
@@ -601,6 +760,13 @@ hr{
 	.swiper-button-next {
 		right: 5%;
 	}
+    .teacher h3{
+        font-size: 27px;
+    }
+    .modal-container {
+        width: 300px;
+        padding: 20px 15px;
+    }
 }
 @media (max-width: 350px) {
 	.blocks h2 {
@@ -634,6 +800,10 @@ hr{
 		width: 40px;
 		height: 45px;
 	}
+    .teacher h3{
+        font-size: 22px;
+        font-weight: 600;
+    }
 }
 @media (max-width: 300px) {
 	.blocks h1 strong {

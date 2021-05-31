@@ -19,6 +19,7 @@ class PagesController
     {
         d()->main_blocks = d()->Main_block;
         d()->school = d()->School;
+        d()->teacher_list = d()->Teacher;
     }
 }
 
