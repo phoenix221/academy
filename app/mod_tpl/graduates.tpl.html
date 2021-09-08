@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="graduates">
+        <h3>ПРЕПОДАВАТЕЛИ<br> <span>Дипломированные выпускники «Академии Джйотиш»</span></h3>
+        <div class="graduates-items" id="graduates">
+            <foreach graduates_list>
+                <div class="graduates-img">
+                    <img class="gr-img-{.id}" v-on:click="grashow({.id})" v-bind:class="{active_gr: isActive{.id}}" src="{.image}" alt="">
+                </div>
+                <div class="graduates-text" v-if="grshow == {.id}">
+                    <p>{.position}</p>
+                    <p class="name">{.name}</p>
+                    {.text}
+                </div>
+            </foreach>
+        </div>
+        <div class="graduates-items-mobile" id="graduates-mobile">
+            <div class="swiper-container graduates-carusel">
+                <div class="swiper-wrapper">
+                    <foreach graduates_list>
+                        <div class="swiper-slide graduates-item-m">
+                            <img class="gr-img-mobile" src="{.image}" alt="">
+                            <div class="graduates-text-mobile">
+                                <p>{.position}</p>
+                                <p class="name">{.name}</p>
+                                {.text}
+                            </div>
+                        </div>
+                    </foreach>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </div>
+</div>

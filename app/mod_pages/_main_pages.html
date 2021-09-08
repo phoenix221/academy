@@ -24,3 +24,14 @@
 </div>
 {{school_tpl}}
 {{teacher_tpl}}
+{{graduates_tpl}}
+<div class="container">
+    <div class="count-student">
+        <foreach facts_list>
+            <div class="facts-items">
+                <span>{.number}</span>
+                <p>{.text}</p>
+            </div>
+        </foreach>
+    </div>
+</div>

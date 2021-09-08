@@ -30,8 +30,8 @@ var swiper = new Swiper(".tabs-carusel", {
     },
 });
 // карусель
-// всплывающее окно
 
+// всплывающее окно
 // register modal component
 Vue.component("modal", {
     template: "#modal-template"
@@ -49,3 +49,37 @@ new Vue({
         showModal6: false
     }
 });
+
+// преподователи
+new Vue({
+    el: "#graduates",
+    data: {
+        grshow: 1,
+        'isActive1': true,
+        'isActive2': false,
+        'isActive3': false,
+        'isActive4': false,
+        'isActive5': false,
+    },
+    methods: {
+        grashow(text) {
+            for (var i = 1; i < 6; i++){
+                if(text == i){
+                    console.log(text);
+                    this.grshow = i;
+                    this['isActive'+i] = true;
+                }else{
+                    this['isActive'+i] = false;
+                }
+            }
+        }
+    }
+});
+// карусель преподователи
+var swiper = new Swiper(".graduates-carusel", {
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+});
+// карусель
