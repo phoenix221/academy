@@ -577,6 +577,94 @@ hr{
 	font-weight: 500;
 	font-size: 16px;
 }
+.main_video {
+	background: url("/images/images/head-1024x208.png");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 500px;
+	margin-top: 20px;
+	text-align: center;
+}
+.main_video h3{
+	color: #093130;
+	font-size: 30px;
+	font-weight: 900;
+	text-transform: uppercase;
+	padding-top: 100px;
+}
+.main_video iframe{
+	width: 500px;
+	height: 266px;
+	padding: 10px;
+}
+.reviews {
+	text-align: center;
+	margin-top: 35px;
+	box-shadow: rgba(76, 173, 201, 0.45) 0px 25px 20px -20px;
+}
+.reviews-items {
+	position: relative;
+	text-align: center;
+}
+.reviews-img{
+	width: 180px;
+	height: auto;
+}
+.swiper-button-next:after{
+	background: url("/images/images/arrow_right.png");
+	background-size: 84px 32px;
+	background-repeat: no-repeat;
+	width: 84px;
+	height: 32px;
+	display: block;
+	content: "";
+}
+.swiper-button-next, .swiper-button-prev{
+	width: 90px;
+	height: auto;
+}
+.swiper-button-prev:after{
+	background: url("/images/images/arrow_left.png");
+	background-size: 84px 32px;
+	background-repeat: no-repeat;
+	width: 84px;
+	height: 32px;
+	display: block;
+	content: "";
+}
+.swiper-button-next{
+	top: 80px;
+	right: 75px;
+}
+.swiper-button-prev{
+	top: 80px;
+	left: 75px;
+}
+.reviews h3 {
+	color: #093130;
+	font-size: 30px;
+	font-weight: 900;
+	text-transform: uppercase;
+}
+.kurs{
+	font-size: 20px;
+	font-weight: 600;
+}
+.reviews-text{
+	text-align: justify;
+}
+.all-reviews {
+	color: #008080;
+	font-size: 20px;
+	font-weight: 700;
+}
+.all-reviews:hover{
+	color: #008080;
+}
+.link-reviews{
+	padding: 20px 0;
+}
 
 /* display:-webkit-box;display:-ms-flexbox;display:flex; */
 
@@ -884,6 +972,17 @@ hr{
 	.facts-items{
 		width: 100%;
 	}
+	.main_video iframe{
+		width: 100%;
+		height: auto;
+	}
+	.main_video{
+		height: 400px;
+	}
+	.reviews-img{
+		width: auto;
+		height: 165px;
+	}
 }
 @media (max-width: 400px) {
 	.blocks h2 {
@@ -939,6 +1038,16 @@ hr{
 	.graduates h3 span {
 		font-size: 20px;
 	}
+	.main_video h3{
+		font-size: 27px;
+	}
+	.reviews h3 {
+		font-size: 27px;
+	}
+	.reviews-img{
+		width: auto;
+		height: 150px;
+	}
 }
 @media (max-width: 350px) {
 	.blocks h2 {
@@ -972,7 +1081,7 @@ hr{
 		width: 40px;
 		height: 45px;
 	}
-    .teacher h3{
+    .teacher h3, reviews h3{
         font-size: 22px;
         font-weight: 600;
     }
@@ -987,6 +1096,10 @@ hr{
 	.graduates h3 span {
 		font-size: 17px;
 		font-weight: 600;
+	}
+	.reviews-img{
+		width: auto;
+		height: 125px;
 	}
 }
 @media (max-width: 300px) {

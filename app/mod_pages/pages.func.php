@@ -22,6 +22,7 @@ class PagesController
         d()->teacher_list = d()->Teacher;
         d()->graduates_list = d()->Graduate;
         d()->facts_list = d()->Countfact;
+        d()->reviews_list = d()->Review;
     }
 }
 

@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="reviews">
+        <h3>ОТЗЫВЫ НАШИХ СТУДЕНТОВ</h3>
+        <div class="swiper-container reviews-carusel" id="reviews">
+            <div class="swiper-wrapper">
+                <foreach reviews_list>
+                    <div class="swiper-slide reviews-items">
+                        <img class="reviews-img" src="{.image}" alt="">
+                        <div class="reviews-text">
+                            <p class="name text-center">{.name}</p>
+                            <p class="kurs text-center">{.kurs}</p>
+                            {.text}
+                        </div>
+                    </div>
+                </foreach>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+        <div class="link-reviews">
+            <a href="" class="all-reviews">Посмотреть все отзывы</a>
+        </div>
+    </div>
+</div>

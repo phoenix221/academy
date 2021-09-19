@@ -23,7 +23,7 @@ new Vue({
     }
 });
 // карусель
-var swiper = new Swiper(".tabs-carusel", {
+var swiper_tabs = new Swiper(".tabs-carusel", {
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
@@ -76,10 +76,17 @@ new Vue({
     }
 });
 // карусель преподователи
-var swiper = new Swiper(".graduates-carusel", {
+var swiper_graduates = new Swiper(".graduates-carusel", {
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
     },
 });
 // карусель
+// карусель отзывов
+var swiper_reviws = new Swiper(".reviews-carusel", {
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+});
