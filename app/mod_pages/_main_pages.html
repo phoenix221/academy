@@ -42,3 +42,18 @@
     </div>
 </div>
 {{reviews_tpl}}
+<div class="container">
+    <div class="jyotish-kurs">
+        <h3>НАШИ КУРСЫ</h3>
+        <foreach kurs_list>
+            <div class="jyotish-kurs-items">
+                <p class="kurs-category">{.f_category}</p>
+                <p class="kurs-title bzzag">{.title}</p>
+                <img src="{.tariff}" alt="">
+                <div class="details-kurs">
+                    <a class="kurs-btn" href="{.url}">Подробнее о курсе</a>
+                </div>
+            </div>
+        </foreach>
+    </div>
+</div>

@@ -655,15 +655,57 @@ hr{
 	text-align: justify;
 }
 .all-reviews {
-	color: #008080;
-	font-size: 20px;
-	font-weight: 700;
-}
+	 color: #008080;
+	 font-size: 20px;
+	 font-weight: 700;
+ }
 .all-reviews:hover{
 	color: #008080;
 }
-.link-reviews{
+.link-reviews {
 	padding: 20px 0;
+}
+.jyotish-kurs{
+	text-align: center;
+	margin: 50px 0;
+}
+.jyotish-kurs h3 {
+	color: #093130;
+	font-size: 30px;
+	font-weight: 900;
+	text-transform: uppercase;
+}
+.bzzag{
+	background: url("/images/images/bgzag.png");
+	background-repeat: no-repeat;
+	background-position: center center;
+	padding: 20px 0;
+}
+.kurs-category{
+	font-weight: 700;
+	font-size: 18px;
+	text-transform: uppercase;
+	margin-top: 30px;
+	margin-bottom: 5px;
+}
+.kurs-title{
+	font-size: 30px;
+	font-weight: 700;
+	color: #0ba29d;
+}
+.jyotish-kurs-items img{
+	width: 80%;
+}
+.details-kurs{
+	margin: 15px 0;
+}
+.kurs-btn{
+	color: #5e5e5e !important;
+	background: #ffdc74;
+	padding: 8px 20px;
+	font-size: 18px;
+	border-radius: 5px;
+	text-decoration: none !important;
 }
 
 /* display:-webkit-box;display:-ms-flexbox;display:flex; */
@@ -896,6 +938,17 @@ hr{
 	.facts-items{
 		width: 50%;
 	}
+	.kurs-title{
+		font-size: 24px;
+		font-weight: 600;
+	}
+	.bzzag {
+		padding: 10px 0;
+		background-size: 100% 100%;
+	}
+	.jyotish-kurs-items img{
+		width: 100%;
+	}
 }
 @media (max-width: 771px) {
 	.swiper-container{
@@ -1041,12 +1094,15 @@ hr{
 	.main_video h3{
 		font-size: 27px;
 	}
-	.reviews h3 {
+	.reviews h3, .jyotish-kurs h3 {
 		font-size: 27px;
 	}
 	.reviews-img{
 		width: auto;
 		height: 150px;
+	}
+	.all-reviews {
+		font-size: 18px;
 	}
 }
 @media (max-width: 350px) {
@@ -1081,7 +1137,7 @@ hr{
 		width: 40px;
 		height: 45px;
 	}
-    .teacher h3, reviews h3{
+    .teacher h3, .reviews h3, .jyotish-kurs h3{
         font-size: 22px;
         font-weight: 600;
     }
@@ -1100,6 +1156,10 @@ hr{
 	.reviews-img{
 		width: auto;
 		height: 125px;
+	}
+	.all-reviews {
+		font-size: 16px;
+		font-weight: 600;
 	}
 }
 @media (max-width: 300px) {

@@ -23,6 +23,7 @@ class PagesController
         d()->graduates_list = d()->Graduate;
         d()->facts_list = d()->Countfact;
         d()->reviews_list = d()->Review;
+        d()->kurs_list = d()->Kur;
     }
 }
 
