@@ -1,0 +1,74 @@
+html, body
+{
+    margin:0;
+    padding:0;
+    font-size: 15px;
+    font-family: 'Exo 2', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+    font-weight: normal;
+    font-style: normal;
+}
+a img, a
+{
+    border:none;
+    outline:none;
+}
+.clear
+{
+    clear:both;
+    visibility: hidden;
+    height:0px;
+    overflow: hidden;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 25px;
+    border-bottom: 2px dotted #000;
+}
+header img{
+    width: 150px;
+    height: auto;
+}
+.head-title{
+    text-align: right;
+}
+.head-title h1 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+}
+.search{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    margin: 20px 0;
+}
+.search input{
+    width: 250px;
+    padding: 5px;
+    margin-right: 10px;
+}
+.head-table tr th{
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+}
+.body-table tr th{
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+}
+.desc-table tr td {
+    font-size: 14px;
+    text-align: justify;
+}
+.title {
+    font-weight: 700;
+    text-align: right !important;
+}
+.modal-dialog{
+    max-width: 700px;
+}

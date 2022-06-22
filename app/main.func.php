@@ -8,6 +8,11 @@ function main()
 		header('Location: '.substr($_SERVER['REQUEST_URI'],0,-5));
 		exit;
 	}
+	if($_SESSION['admin'] != 'developer'){
+        header("HTTP/1.1 301 Moved Permanently");
+        header('Location: /databank/');
+        exit;
+    }
 
 	if(url(1)=='index') d()->main = 1;
 	d()->content = d()->content();

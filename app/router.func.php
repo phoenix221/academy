@@ -4,6 +4,7 @@ route_all();
 
 route('/error_404', 'error_404');
 route('/', 'pages#main_pages');
+route('/databank/index', 'main', 'databanks#index');
 
 route('/get/session', 'main', 'get_session');
 route('/get/server', 'main', 'get_server');
