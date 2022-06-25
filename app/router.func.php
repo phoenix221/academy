@@ -10,6 +10,7 @@ route('/get/session', 'main', 'get_session');
 route('/get/server', 'main', 'get_server');
 
 route('/ajax/size_width', 'main','ajax_size_width');
+route('/ajax/get_cart', 'main','databanks#show');
 
 
 //route('/news/index', 'content', 'news#index');
