@@ -17,6 +17,11 @@ class PagesController
 
 	function main_pages()
     {
+        if(url(1)!= 'index'){
+            d()->page_not_found();
+        }
+        d()->this = d()->Page->where('url="index"');
+
         d()->main_blocks = d()->Main_block;
         d()->school = d()->School;
         d()->teacher_list = d()->Teacher;

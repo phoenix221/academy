@@ -13,6 +13,11 @@ function main()
         header('Location: /databank/');
         exit;
     }
+    if(substr(url(), -6)!='/index'){
+        header("HTTP/1.1 301 Moved Permanently");
+        header('Location: /'.url().'/');
+        exit;
+    }
 
 	if(url(1)=='index') d()->main = 1;
 	d()->content = d()->content();
@@ -69,5 +74,45 @@ function ajax_size_width(){
     if($_POST['size']){
         $_SESSION['size'] = $_POST['size'];
     }
+}
+
+function authentication(){
+    if(!$_POST['email'] || !$_POST['pass']){
+        return 'error';
+    }
+
+    $u = d()->User->where('email=?', $_POST['email'])->limit(0,1);
+    if(count($u)){
+        $pass = md5($_POST['pass']);
+        if($pass == $u->password){
+            d()->Auth->login($u->id);
+
+            /*$u->last_login = date('Y-m-d H:i:s');
+            $u->save();*/
+            return 'success';
+        }
+    }
+    return 'error';
+}
+
+function ajax_check_url_genereator(){
+    if($_POST['url'] && $_POST['table'] && $_POST['id']){
+        $url = $_POST['url'];
+        $temp_url = '';
+        $w = '';
+        if($_POST['id']!='add')$w = ' AND id != '.$_POST['id'];
+        $c = d()->Model->sql('SELECT * FROM '.$_POST['table'].' WHERE url = "'.$url.'"'.$w);
+
+        $i = 1;
+        while(!$c->is_empty()){
+            $temp_url = '-'.$i;
+            $c = d()->Model->sql('SELECT * FROM '.$_POST['table'].' WHERE url = "'.$url.$temp_url.'"');
+            $i++;
+        }
+
+        print $url.$temp_url;
+        exit;
+    }
+    d()->page_not_found();
 }
 

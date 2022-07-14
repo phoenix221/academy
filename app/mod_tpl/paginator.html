@@ -1,0 +1,36 @@
+<nav aria-label="Page navigation">
+    <ul class="pagination">
+        <li class="page-item">
+            <a class="page-link" href="?{QS_NOT_PAGE}" aria-label="Начало">
+                <span aria-hidden="true">&laquo;</span>
+                <span class="sr-only">Начало</span>
+            </a>
+        </li>
+
+        <foreach paginator_list>
+            @if(d()->this['type']=="LINK"):
+            <li class="page-item">
+                <a href="{.link}" class="page-link">{.title}</a>
+            </li>
+            @endif;
+
+            @if(d()->this['type']=="ACTIVE"):
+            <li class="page-item active">
+                <a href="#" class="page-link">{.title}</a>
+            </li>
+            @endif;
+
+            @if(d()->this['type']=="EMPTY"):
+            <li class="page-item disbled">
+                <a href="#" class="page-link">...</a>
+            </li>
+            @endif;
+        </foreach>
+        <li class="page-item">
+            <a class="page-link" href="{paginator_right|h}" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+                <span class="sr-only">Вперед</span>
+            </a>
+        </li>
+    </ul>
+</nav>

@@ -4,6 +4,15 @@ class DatabanksController
 {
     function index()
     {
+        if(substr(url(), -6)!='/index'){
+            header("HTTP/1.1 301 Moved Permanently");
+            header('Location: /'.url().'/');
+            exit;
+        }
+        if(url(1)!='databank' || url(2)!='index'){
+            d()->page_not_found();
+        }
+
         d()->banks_list = d()->Databank;
         if($_POST['search']){
             $search_string = 'id="'.$_POST['search'].'" OR mapdx LIKE "%'.$_POST['search'].'%" OR description LIKE "%'.$_POST['search'].'%"';
@@ -17,10 +26,45 @@ class DatabanksController
             $search_string .= ' OR related_cards LIKE "%'.$_POST['search'].'%"';
             d()->banks_list = d()->Databank->where($search_string);
         }
+
+        d()->QUERY_STRING = $_SERVER['QUERY_STRING'];
+        d()->QS_NOT_PAGE = '';
+        foreach($_GET as $k=>$v){
+            if($k=='page')continue;
+
+            if(d()->QS_NOT_PAGE)d()->QS_NOT_PAGE .= '&';
+            d()->QS_NOT_PAGE .= $k.'='.$v;
+        }
+        if($_GET['action']=='logout'){
+            d()->Auth->logout();
+            header('Location: /databank/');
+            exit;
+        }
+
+        d()->banks_list->paginate(15)->order_by('id ASC');
+        d()->paginator = d()->Paginator->custom_template("/app/mod_tpl/paginator.html")->generate(d()->banks_list);
     }
 
     function show()
     {
-        d()->this = d()->Databank($_POST['id']);
+        if($_SESSION['auth'] || $_SESSION['admin']){
+            d()->this = d()->Databank($_POST['id']);
+        }else{
+            return 'auth';
+        }
+    }
+
+    function instrukciyu(){
+        if(substr(url(), -6)!='/index'){
+            header("HTTP/1.1 301 Moved Permanently");
+            header('Location: /'.url().'/');
+            exit;
+        }
+        if(url(1)!='instrukciyu' || url(2)!='index'){
+            d()->page_not_found();
+        }
+
+        d()->this = d()->Page->where('url = "instrukciyu/"');
+        $_SESSION['dbg1'] = d()->this->id;
     }
 }
