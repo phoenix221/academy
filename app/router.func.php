@@ -13,8 +13,9 @@ route('/get/session', 'main', 'get_session');
 route('/get/server', 'main', 'get_server');
 
 route('/ajax/size_width', 'main','ajax_size_width');
-route('/ajax/get_cart', 'main','databanks#show');
+route('/ajax/get_cart', 'main','databanks#show_blocks');
 route('/ajax/authentication', 'main','authentication');
+route('/ajax/filter', 'main','ajax_filter');
 route('/ajax/check_url_genereator', 'main','ajax_check_url_genereator');
 
 

@@ -1,0 +1,33 @@
+<div class="search">
+    <form method="post">
+        @d()->search = $_SESSION['post']['search'];
+        <input type="text" autocomplete="off" name="search" value="{search}">
+        <div class="filter" id="filter-block">
+            <foreach filter_list>
+                <select class="form-select" name="{.title}">
+                    <option selected disabled>{.title}</option>
+                    @$fl = trim(d()->this->items, '|');
+                    @$items = explode('|', $fl);
+                    @d()->items_list = array();
+                    @foreach ($items as $ki=>$vi):
+                    @$i = d()->Filter_item($vi);
+                    @d()->items_list[] = $i->title;
+                    @endforeach;
+                    @$_SESSION['dbg1'] = $_SESSION['post'][d()->this->title];
+                    @foreach(d()->items_list as d()->value):
+                    @if($_SESSION['post'][d()->this->title] == d()->value):
+                    @d()->checked = 'selected';
+                    @else:
+                    @d()->checked = '';
+                    @endif;
+                    <option value="{value}" {checked}>{value}</option>
+                    @endforeach;
+                </select>
+            </foreach>
+        </div>
+        <div class="block-btn">
+            <a href="?clear=1" class="btn btn-warning btn_link">Сбросить</a>
+            <input type="submit" class="btn btn-dark btn-search" value="Найти">
+        </div>
+    </form>
+</div>

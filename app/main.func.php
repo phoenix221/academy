@@ -116,3 +116,10 @@ function ajax_check_url_genereator(){
     d()->page_not_found();
 }
 
+function ajax_filter(){
+    d()->filter_list = d()->Filter->where('is_active = 1');
+    if(!d()->filter_list->is_empty){
+        print d()->filter_tpl();
+    }
+}
+
